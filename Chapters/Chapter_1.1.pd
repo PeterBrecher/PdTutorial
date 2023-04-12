@@ -1,0 +1,26 @@
+#N canvas 676 0 681 676 12;
+#X text 47 33 Chapter 1;
+#X text 46 76 Welcome to Pure Data.;
+#X text 45 212 The first window contains an important feature: the
+above mentioned DSP checkbox. By toggling this you can turn the audio
+on or off. Whenever you will want to listen to something within Pure
+Data \, turn the audio on.;
+#X text 46 286 The main window of the tutorial contains the list of
+chapters you can browse and a button for opening an empty worksheet
+on which you can complete exercises found within the tutorial and practice
+the things you just learned.;
+#X text 48 366 So before continuing \, open an empty worksheet \, and
+let's start learning by switching to the next page:;
+#X msg 50 457 \; pd open Chapter_1.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 81;
+#X obj 50 429 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 43 451 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 76 424 Next page;
+#X text 46 117 Right now you most likely have 3 windows of Pure Dat
+open: a small one which contains the "Audio off" or "Audio on" text
+together with a checkbox marked as DSP \, a second \, big window \,
+which is the main window of this tutorial \, and a window with Chapter
+1 you are currently reading.;
+#X connect 6 0 5 0;

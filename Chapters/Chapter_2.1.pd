@@ -1,0 +1,34 @@
+#N canvas 676 0 681 676 12;
+#X text 66 12 Chapter 2;
+#X text 64 143 As we can see \, we are not making any use of the oscillator's
+inlets. Instead \, we are passing the value 440 right at the object's
+creation.;
+#X text 61 271 Connect it to the oscillator's left inlet and delete
+the 440 from the osc~ object.;
+#X text 62 214 Let's create a Number by clicking on "Put" and then
+choosing "Number".;
+#X obj 66 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 63 380 Numbers have a peculiar attribute: you cannot edit them
+in Edit mode! You have to disable Edit mode (Ctrl+E) and then you can
+click on it and write something inside. So disable Edit mode \, write
+440 into the Number \, press Enter and observe what happens. If you
+have the Sound on \, then you should hear the same sound as you did
+at the end of the previous lesson.;
+#X text 68 48 Numbers;
+#X text 93 312 Show solution;
+#X text 63 88 Let's take our example from the previous lesson comprising
+of the osc~ and dac~ objects.;
+#X msg 66 336 \; pd open Solution_2.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 83;
+#X obj 67 512 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 97 509 Next page;
+#X msg 67 532 \; pd open Chapter_2.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 82;
+#X obj 54 335 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 59 529 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X connect 4 0 9 0;
+#X connect 10 0 12 0;

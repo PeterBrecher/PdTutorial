@@ -1,0 +1,22 @@
+#N canvas 676 0 681 676 12;
+#X text 47 30 Chapter 6;
+#X text 48 82 Line exercise;
+#X text 47 127 Create an oscillator that will gradually play notes
+from A1 to A5 in the span of 2000 milliseconds. The frequencies of
+the needed notes are: A1 = 55 Hz A5 = 880 Hz;
+#X obj 51 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 88 213 Show solution;
+#X msg 51 242 \; pd open Solution_6.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 84;
+#X obj 52 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 52 315 \; pd open Chapter_6.3.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 84;
+#X text 80 291 Next page;
+#X obj 48 235 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 46 313 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X connect 3 0 5 0;
+#X connect 6 0 7 0;

@@ -1,0 +1,21 @@
+#N canvas -5 11 681 386 12;
+#X msg 51 29 55 \, 880 2000;
+#X obj 51 80 line;
+#X floatatom 51 136 5 0 0 0 - - -;
+#X obj 51 189 osc~;
+#X obj 51 239 *~ 1;
+#X obj 50 297 dac~;
+#X text 238 62 We are making use of the Line object. We send each of
+its output to an oscillator that then converts it to an audio wave.
+;
+#X text 242 177 FAQ;
+#X text 241 214 Is the Number object necessary? No \, it is only for
+us to see what is the Line's output. What is the *~ object for? It
+sets the volume of the oscillator's output to 1 It is also not necessary
+to include it.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;

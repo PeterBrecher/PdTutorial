@@ -1,0 +1,58 @@
+#N canvas 656 0 696 673 12;
+#X text 38 34 Chapter 4;
+#X msg 49 342 440;
+#X obj 49 390 osc~;
+#X obj 48 436 *~ 0;
+#X obj 49 486 dac~;
+#X msg 113 389 1;
+#X msg 156 342 880;
+#X msg 232 391 0.5;
+#X obj 49 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 156 277 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 38 546 Clicking on the left Bang is equivalent to clicking
+on the 440 and 1 Messages at once. This sends the value 440 to the
+oscillator telling it to play with frequency 440 and the value 1 to
+the multiplier \, telling it to play with full volume. Clicking the
+right Bang does the same thing \, but with the Messages of 880 and
+0.5.;
+#X msg 380 396 0;
+#X text 414 397 <- Click here to make the patch silent again;
+#X text 39 670 Exercise;
+#X text 37 708 Create a chord of A Major using oscillators. In other
+words \, create 3 oscillators that each play a different note from
+the A Major chord. The tones that consist A Major and their frequencies
+are as follows: A 440 Hz C# 554.37 Hz E 659.25 Hz Make sure you can
+activate the chord with one click.;
+#X text 90 805 Show solution;
+#X obj 46 804 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 46 826 \; pd open Solution_4.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 84;
+#X text 39 890 End of Chapter 4;
+#X obj 41 824 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 34 924 (You can now close every page of this chapter);
+#X text 38 87 Now we ran into a problem. Our oscillator does not know
+what to play. It has too many options. And as described in Lesson 2
+\, Messages are activated by clicking on them. However \, how can we
+click on 2 Messages at once - the frequency and the volume? For this
+\, there is a very useful object called Bang.;
+#X text 39 179 A Bang is like a mouse click \, but enables us to click
+at as many objects at once as we connect to it. So let's add 2 Bangs
+into our patch - one for the first tone and one for the second one.
+;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 3 1;
+#X connect 6 0 2 0;
+#X connect 7 0 3 1;
+#X connect 8 0 1 0;
+#X connect 8 0 5 0;
+#X connect 9 0 6 0;
+#X connect 9 0 7 0;
+#X connect 11 0 3 1;
+#X connect 16 0 17 0;

@@ -1,0 +1,40 @@
+#N canvas 671 0 681 676 12;
+#X text 62 39 Chapter 1;
+#X obj 58 239 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 85 235 Show solution;
+#X msg 58 260 \; pd open Solution_1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 82;
+#X text 56 781 End of Chapter 1;
+#X obj 51 258 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 52 814 (You can now close all pages of this chapter);
+#X text 56 162 You can connect two objects by hovering your mouse over
+one object's outlet (or inlet) until your mouse pointer turns into
+a circle. Then you click and drag the line that appears to the other
+object's inlet or outlet.;
+#X text 55 311 After connecting the second line \, a steady sound should
+be playing. If that is the case \, go back to the first Pd window \,
+untick the "DSP" box and let's find out what happened. We created an
+Oscillator object with the information 440;
+#X text 56 410 We call an information that is after an object's name
+an argument because it tells us about the properties of the object.
+;
+#X text 57 472 As you may know \, an oscillator's function is to create
+a sound wave. So in this case \, the argument of 440 tells it to create
+a sound wave with the frequency of 440 Hz. This sound wave is produced
+by the oscillator \, and therefore is its output.;
+#X text 57 568 We already know that an object's output is sent out
+through its outlet. The lines connecting the two objects are called
+wires and they transport the information between objects that they
+connect. The sound wave is therefore transported to the Digital Analog
+Converter's inlets. There are two inlets \, because the sound we are
+working on is stereo.;
+#X text 56 680 The Converter does not have any arguments \, because
+it does not need one. It already receives everything it needs from
+the Oscillator (the sound wave). The Converter then takes the received
+sound wave and converts it to actual sound that you heard.;
+#X text 57 103 Let's create another object and name it "dac~" (Digital
+Analog Converter) and connect the oscillator to both inlets of this
+object.;
+#X connect 1 0 3 0;

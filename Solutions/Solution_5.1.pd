@@ -1,0 +1,43 @@
+#N canvas 1 1 681 676 12;
+#X msg 64 32 220;
+#X msg 152 32 220;
+#X obj 107 87 +;
+#X obj 107 142 osc~;
+#X obj 107 189 *~ 0;
+#X obj 106 241 dac~;
+#X msg 171 141 1;
+#X text 62 290 How can you make this play?;
+#X obj 64 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 64 371 \; pd open Incorrect.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 75;
+#X obj 61 421 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 61 444 \; pd open Incorrect.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 78;
+#X obj 59 502 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 59 527 \; pd open Correct.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 76;
+#X text 85 413 By clicking on the Message that says 1 and then the
+leftmost message that says 220;
+#X obj 59 369 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 56 443 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 53 522 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 80 493 By clicking on all 3 Messages from right to left (1
+-> 220 -> 220), f 70;
+#X text 86 346 There is no way to make it play without modifying it
+;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 4 1;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;

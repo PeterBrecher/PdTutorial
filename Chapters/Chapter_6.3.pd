@@ -1,0 +1,46 @@
+#N canvas 676 0 681 676 12;
+#X text 45 31 Chapter 6;
+#X text 47 80 Metro;
+#X text 42 117 The metro object may be more familiar to those who have
+studied or played music \, as it is the Pure Data-version of a metronome.
+;
+#X text 42 286 Can you try to construct a patch using the "metro" object
+that would send out bangs every 1000 milliseconds?;
+#X obj 46 336 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 46 360 \; pd open Solution_6.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 83;
+#X text 42 180 The main purpose of this object is to send out Bangs
+on regular intervals. The object can be turned on or off by sending
+a 0 or a 1 to its left inlet \, for example by a Toggle or a pair of
+Messages. Its right inlet expects a number and this argument defines
+how often in milliseconds the Bangs will be sent out from its outlet.
+;
+#X text 40 409 Delay and Pipe;
+#X text 41 447 The Delay and Pipe objects both receive some type of
+data and then after a certain time send this data out from their output.
+What is the difference between them and what kind of data are we talking
+about?;
+#X text 41 525 Delay: It should receive a Bang to its input and then
+after the number of milliseconds defined in its argument sends this
+Bang out.;
+#X text 42 583 Pipe: The type of data that a Pipe can receive is more
+flexible as it can be either a symbol or a number. In case the object
+should receive a symbol \, this has to be specified in its argument.
+;
+#X obj 248 666 pipe 1000;
+#X obj 249 707 pipe s 1000;
+#X text 42 665 A Pipe expecting a number:;
+#X text 43 705 A Pipe expecting a symbol:;
+#X obj 48 749 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 81 746 Next page;
+#X msg 48 772 \; pd open Chapter_6.4.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 84;
+#X obj 42 357 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 71 334 Show solution;
+#X obj 46 768 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X connect 4 0 5 0;
+#X connect 15 0 17 0;

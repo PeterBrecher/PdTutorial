@@ -1,0 +1,47 @@
+#N canvas 676 0 681 676 12;
+#X text 66 35 Chapter 3;
+#X text 65 94 In the previous lesson we learned that numbers are pretty
+useful in Pure Data. However \, what are numbers without mathematical
+operations \, right? Of course \, Pure Data has support for these \,
+so let's take a look at them! You can find all four types of basic
+arithmetic operations in Pd: addition \, subtraction \, multiplication
+\, and division.;
+#X obj 70 205 +;
+#X obj 70 253 -;
+#X obj 69 302 *;
+#X obj 68 348 /;
+#X text 114 206 Addition;
+#X text 114 254 Subtraction;
+#X text 115 298 Multiplication;
+#X text 116 346 Division;
+#X text 66 408 Remember the little wave symbol in the oscillator and
+dac objects? It's called a tilde and it means that the object works
+with audio signals. If you want to apply arithmetic operations on the
+output of such objects \, you have to use a different version of them
+which are also marked with a tilde.;
+#X obj 70 521 +~;
+#X obj 124 521 -~;
+#X obj 178 521 *~;
+#X obj 233 521 /~;
+#X text 62 581 These operations have one very important property. As
+you can see they have two inlets and each works a little bit differently.
+Let's say you connect two numbers to the "+" object \, each number
+to one of the inlets. The operation will be performed only after you
+enter the number that is connected to the leftmost inlet of the operation.
+Let's illustrate it on the following example:;
+#X obj 65 716 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 91 714 Show example;
+#X msg 65 738 \; pd open Solution_3.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 83;
+#X obj 221 717 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 248 715 Next page;
+#X msg 221 740 \; pd open Chapter_3.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 81;
+#X obj 61 735 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 213 736 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X connect 16 0 18 0;
+#X connect 19 0 21 0;

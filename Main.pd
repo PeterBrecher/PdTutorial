@@ -1,0 +1,73 @@
+#N canvas -8 -8 1366 685 12;
+#N canvas 47 279 681 676 worksheet 0;
+#X restore 971 89 pd worksheet;
+#X obj 117 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 116 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 116 273 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 116 348 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 111 26 Welcome to the Pd Tutorial!;
+#X text 113 74 You can browse the chapters:;
+#X text 714 91 Click here to open your worksheet:;
+#X obj 114 426 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 111 504 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 116 221 \; pd open Chapter_2.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 84;
+#X msg 116 295 \; pd open Chapter_3.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 82;
+#X msg 116 372 \; pd open Chapter_4.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 84;
+#X msg 114 449 \; pd open Chapter_5.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 83;
+#X msg 111 525 \; pd open Chapter_6.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 82;
+#X obj 114 217 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 111 294 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 110 366 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 107 446 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 106 523 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X msg 117 153 \; pd open Chapter_1.1.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 81;
+#X obj 111 148 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 836 315 cnv 15 30 200 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 867 315 cnv 15 40 25 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 968 439 cnv 15 25 50 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 867 390 cnv 15 40 25 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 1033 314 cnv 15 30 200 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 993 489 cnv 15 40 25 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 992 414 cnv 15 40 25 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X obj 908 341 cnv 15 25 50 empty empty empty 20 12 0 14 -4160 -66577
+0;
+#X text 23 130 to start ->;
+#X text 25 108 Click here;
+#X text 142 131 Chapter 1 - Intro;
+#X text 138 197 Chapter 2 - Numbers and Messages;
+#X text 137 347 Chapter 4 - Muting a patch;
+#X text 139 271 Chapter 3 - Arithmetic operations;
+#X text 137 502 Chapter 6 - Line \, Metro \, Delay \, Pipe and Random
+;
+#X text 136 425 Chapter 5 - Trigger and Toggle;
+#X connect 1 0 20 0;
+#X connect 2 0 10 0;
+#X connect 3 0 11 0;
+#X connect 4 0 12 0;
+#X connect 8 0 13 0;
+#X connect 9 0 14 0;

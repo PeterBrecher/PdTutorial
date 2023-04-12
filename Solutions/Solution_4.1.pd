@@ -1,0 +1,28 @@
+#N canvas 0 50 547 574 12;
+#X obj 105 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 46 137 osc~;
+#X obj 46 199 dac~;
+#X obj 105 137 osc~;
+#X obj 105 199 dac~;
+#X obj 167 137 osc~;
+#X obj 167 199 dac~;
+#X msg 46 86 440;
+#X msg 105 86 554.37;
+#X msg 167 86 659.25;
+#X text 43 283 Explanation;
+#X text 42 338 The leftmost oscillator plays a tone of frequency 440
+(the tone A4) The center one plays the frequency 554.37 (C#5) And the
+right one plays a tone of frequency 659.25 (E5). As there are 3 Messages
+to be activated (clicked on) at the same time \, we need to use a Bang
+that is connected to all 3 After clicking on the Bang \, this click
+gets sent out to all three Messages.;
+#X connect 0 0 7 0;
+#X connect 0 0 8 0;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 7 0 1 0;
+#X connect 8 0 3 0;
+#X connect 9 0 5 0;

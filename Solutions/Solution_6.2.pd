@@ -1,0 +1,25 @@
+#N canvas -7 0 681 676 12;
+#X msg 149 59 1000;
+#X msg 77 61 1;
+#X obj 77 119 metro;
+#X obj 77 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 23 60 0;
+#X text 24 13 Example solution 1:;
+#X text 285 14 Example solution 2:;
+#X obj 307 121 metro;
+#X obj 307 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 382 63 5 0 0 0 - - -;
+#X obj 307 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 432 61 <- put a 1000 here;
+#X text 24 251 Note: These aren't the only two solutions \, so feel
+free to play around!;
+#X connect 0 0 2 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 1;

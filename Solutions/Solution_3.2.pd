@@ -1,0 +1,25 @@
+#N canvas 15 29 694 437 12;
+#X floatatom 47 49 5 0 0 0 - - -;
+#X floatatom 132 49 5 0 0 0 - - -;
+#X obj 89 108 +;
+#X obj 89 146 osc~;
+#X obj 89 191 dac~;
+#X text 220 78 Explanation: The two Number objects send their value
+to the addition operation. After entering the left number \, the operation
+gets triggered and the result (440) gets sent to the oscillator \,
+which then sends it to the converter and plays it on our computers.
+;
+#X text 223 195 FAQ;
+#X text 220 233 Is this the only solution? No. You can use any two
+numbers with the combination of any operation that would give us 440
+as a result. So 440 * 1 would work too.;
+#X text 223 302 Why did we not use the audio signal version of the
+addition operation (+~)? The oscillator takes in a number and then
+outputs a signal. So before we enter the oscillator we are still working
+with ordinary numbers and hence there is no need to use a tilde.;
+#X text 221 38 Note: You should enter the number 220 to both Number
+objects;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;

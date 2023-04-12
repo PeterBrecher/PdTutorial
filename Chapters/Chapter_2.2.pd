@@ -1,0 +1,75 @@
+#N canvas 675 0 681 676 12;
+#X text 42 57 Messages;
+#X obj 48 281 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 69 277 Show solution;
+#X text 43 358 Numbers vs. Messages;
+#X text 45 832 Test your knowledge;
+#X text 46 871 When can an object's contents be edited?;
+#X text 44 911 Numbers;
+#X obj 47 947 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 71 946 Runtime;
+#X obj 230 946 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 257 945 Edit mode;
+#X obj 46 1042 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 71 1040 Runtime;
+#X obj 225 1043 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 251 1040 Edit mode;
+#X text 44 1009 Messages;
+#X msg 47 969 \; pd open Correct.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 77;
+#X msg 46 1063 \; pd open Incorrect.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 76;
+#X msg 225 1064 \; pd open Correct.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 75;
+#X msg 230 970 \; pd open Incorrect.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Misc
+, f 76;
+#X text 45 17 Chapter 2;
+#X text 30 1129 End of Chapter 2;
+#X msg 48 303 \; pd open Solution_2.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 83;
+#X obj 46 300 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 40 966 cnv 15 750 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 41 1062 cnv 15 750 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 42 84 Let's learn about messages through the same example as
+before. These objects are oftentimes very similar to Numbers. Delete
+the Number from the previous example and replace it by a Message. You
+create a message by clicking on "Put" and then "Message". What to write
+inside the object?;
+#X text 44 180 Well \, that depends on what you want to do with it
+\, messages are very flexible! In this case we are going to replace
+the Number object \, so let's write the same content: 440 Now just
+click on the message and you should hear the same sound again.;
+#X text 42 404 What is the difference between a Number and a Message?
+What are their use cases?;
+#X text 40 457 A Number acts as a "real time" display of a value that
+is currently being processed in the patch. Remember how you could only
+edit the number when not in edit mode?;
+#X text 40 516 On the contrary \, a Message's contents are defined
+at its creation and cannot be changed outside of Edit mode when the
+patch is "running". In addition \, a Message can contain many other
+types of values apart from a number. That will become clearer in later
+lessons.;
+#X text 40 603 You may ask what is the point of the Number object then.
+There are many cases when you need to change a value while the patch
+is running \, and creating a separate Message for each possible value
+so that you can switch between them by clicking on them is not very
+practical. Plus sometimes you want to observe what an output value
+is and Numbers are greatly suited for that.;
+#X text 41 720 Even though we did not see it in the example \, Numbers
+can be connected to an object's outlet too \, and if the object is
+producing some value \, then it will be displayed in the Number in
+real time.;
+#X text 26 1156 (You can now close all pages of this chapter);
+#X connect 1 0 22 0;
+#X connect 7 0 16 0;
+#X connect 9 0 19 0;
+#X connect 11 0 17 0;
+#X connect 13 0 18 0;

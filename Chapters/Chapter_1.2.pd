@@ -1,0 +1,47 @@
+#N canvas 676 1 681 676 12;
+#X obj 65 427 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 62 39 Chapter 1;
+#X msg 65 455 \; pd-worksheet obj 25 25 osc~ 440;
+#X obj 69 830 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 94 828 Next page;
+#X obj 60 451 cnv 15 400 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X msg 69 850 \; pd open Chapter_1.3.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 81;
+#X obj 65 847 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 60 319 First make sure you have your worksheet open. Now click
+on "Put" and then the "Object" button in the taskbar. When a square-looking
+structure appears next to your mouse \, just click anywhere on the
+blank page to "put it down". Now write "osc~ 440" into it and then
+click anywhere in the empty window.;
+#X text 59 90 The bulk of work with Pure Data revolves around objects.
+What are objects \, you ask? Well \, let's first create one and learn
+about them through an example.;
+#X text 60 153 Before you proceed \, there is one very important concept
+to remember: Pure Data has two modes - one where you can edit the patch
+(marked by [edit] next to the patch name) and one where you cannot
+edit it. Switching between these two modes is done either by pressing
+Ctrl and E or clicking on "Edit" and then "Edit mode". I recommend
+doing it the former way.;
+#X text 61 260 So make sure you are in Edit mode and let's proceed
+to the example.;
+#X text 58 511 Congrats \, you have created your first object! Its
+name is Oscillator and the little wave after its name signalized that
+it works with audio signals.;
+#X text 59 640 Now an object by itself does not do much. That's why
+it has those three black marks on it. The marks that appear on the
+top of the object \, above the name are called inlets.;
+#X text 59 703 An inlet's function is to receive data from other objects.
+However \, some objects can receive data by writing it after their
+name \, like in this case. Our Oscillator receives the number 440;
+#X text 60 778 The mark on the bottom is called an outlet \, and its
+function is to send data out from the object.;
+#X text 58 578 You can also delete an object by clicking on it and
+then pressing the "Delete" key on your keyboard.;
+#X text 92 419 If you need help \, click here to add this object to
+your worksheet!;
+#X connect 0 0 2 0;
+#X connect 3 0 6 0;

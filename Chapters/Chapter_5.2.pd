@@ -1,0 +1,40 @@
+#N canvas 676 0 681 676 12;
+#X text 47 32 Chapter 5;
+#X msg 49 78 220;
+#X msg 137 78 220;
+#X obj 92 133 +;
+#X obj 92 188 osc~;
+#X obj 92 235 *~ 0;
+#X obj 91 287 dac~;
+#X msg 156 187 1;
+#X text 42 595 A Toggle has 2 states: Deactivated (or off) and activated
+(on). When we activate a Toggle by clicking on it \, it sends out a
+1 When we deactivate it \, it sends out a 0 Let's replace our 1 Message
+with a Toggle.;
+#X obj 46 670 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 46 696 \; pd open Chapter_5.3.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 82;
+#X text 75 668 Next page;
+#X obj 42 689 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 45 333 There are actually 2 ways to make the above patch play:
+Clicking on all 3 Messages from right to left. Clicking on the right
+220 \, then the left 220 \, and then on the 1;
+#X text 46 399 It is logical because there are 2 elements to this:
+creating the oscillator input by doing the calculation \, and an object
+increasing the volume. In what order we do this doesn't matter.;
+#X text 43 472 However \, now you may notice that you patch keeps playing
+and there is no way to make it silent again. Thankfully there is a
+very useful object in Pure Data called Toggle. It is somewhat similar
+to a Bang in that it can "activate" things \, but it can also deactivate
+them. When we click on a Bang \, we interpret its output as a mouse
+click. However \, a computer sees it as sending out a 1;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 7 0 5 1;
+#X connect 9 0 10 0;

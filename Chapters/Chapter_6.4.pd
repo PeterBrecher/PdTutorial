@@ -1,0 +1,24 @@
+#N canvas 678 0 681 676 12;
+#X text 48 30 Chapter 6;
+#X text 51 76 Random;
+#X text 50 119 A Random object outputs a random number between 0 and
+the number specified in its argument (excluding that number). It is
+activated by a Bang to its left inlet. For example \, here is a Random
+object that would generate numbers between 0 and 10:;
+#X obj 53 213 random 11;
+#X text 48 273 Tying it all together;
+#X text 50 355 Create an oscillator that progressively increases its
+frequency from 0Hz to 880Hz within the span of 5000 milliseconds. However
+\, the output sound of the oscillator should only increase every 1000
+milliseconds.;
+#X obj 55 435 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 88 431 Show solution;
+#X msg 55 455 \; pd open Solution_6.3.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 83;
+#X text 52 318 Exercise;
+#X text 53 530 End of Chapter 6;
+#X obj 48 453 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 49 570 (You can now close every page of this chapter);
+#X connect 6 0 8 0;

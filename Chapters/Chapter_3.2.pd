@@ -1,0 +1,26 @@
+#N canvas 666 0 681 676 12;
+#X text 50 107 It is also possible to combine the operation with the
+operand:;
+#X floatatom 55 164 5 0 0 0 - - -;
+#X obj 55 217 * 2;
+#X floatatom 55 271 5 0 0 0 - - -;
+#X text 51 321 Here the multiplication operation object takes an argument
+of 2 \, which tells it with what it should multiply the number sent
+to its inlet.;
+#X text 49 392 Exercise;
+#X text 49 428 Use two Number objects to create a sound wave with the
+frequency of 440 Hz out of an oscillator and play it on the computer's
+speaker.;
+#X obj 53 489 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 85 488 Show solution;
+#X msg 53 512 \; pd open Solution_3.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 83;
+#X text 55 35 Chapter 3;
+#X text 47 578 End of Chapter 3;
+#X obj 47 511 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 43 613 (You can now close every page of this chapter);
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 7 0 9 0;

@@ -1,0 +1,26 @@
+#N canvas 676 0 681 676 12;
+#X text 45 29 Chapter 5;
+#X obj 55 290 trigger bang bang;
+#X text 52 344 The above Trigger will send out a Bang from each of
+its outlets. And the order will be the following: first from the right
+outlet \, then the left one.;
+#X obj 59 411 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 90 407 Click on this bang to see our final patch;
+#X msg 59 432 \; pd open Solution_5.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Solutions
+, f 84;
+#X text 58 486 End of Chapter 5;
+#X obj 54 430 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 53 524 (You can now close every page of this chapter);
+#X text 49 77 We can now activate the patch the same way as before
+\, but by deactivating the Toggle we can make it silent again.;
+#X text 49 124 Let's do one final adjustment. We keep making the patch
+play by 3 clicks. To replace the 3 clicks by 1 while making sure we
+stick to the order of operations (right -> left) \, we will use a Trigger
+object.;
+#X text 50 199 A Trigger can take several types of inputs \, in our
+case we will use a Bang. When it receives an input \, it sends something
+out of its outlets. What it will be is defined by its arguments. For
+example:;
+#X connect 3 0 5 0;

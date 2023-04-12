@@ -1,0 +1,21 @@
+#N canvas 0 50 717 569 12;
+#X floatatom 60 121 5 0 0 0 - - -;
+#X obj 110 184 +;
+#X floatatom 163 121 5 0 0 0 - - -;
+#X floatatom 110 261 5 0 0 0 - - -;
+#X text 238 51 Step 1: Let's send the number 220 to the right inlet
+of the addition operation. We can see that the result is still 0 Why?
+Because we did not send anything to the leftmost inlet.;
+#X text 230 170 Step 2: If we now enter 220 into the left Number object
+that is connected to the leftmost inlet \, the operation gets activated
+and the result changes.;
+#X text 229 274 Step 3: However \, if we again send something to the
+right inlet \, the result does not change. It's because the leftmost
+inlet's input did not change from the previous state and so the operation
+does not get "activated".;
+#X text 234 376 Terminology Alert: Inlets that cause immediate change
+are called hot inlets. Those that do not cause immediate change are
+called cold inlets.;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;

@@ -1,0 +1,36 @@
+#N canvas 676 0 681 676 12;
+#X text 38 34 Chapter 4;
+#X msg 43 396 440;
+#X obj 43 444 osc~;
+#X obj 42 490 *~ 0;
+#X obj 43 540 dac~;
+#X obj 42 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 69 650 Next page;
+#X msg 42 670 \; pd open Chapter_4.2.pd C:/Users/Peťo/Desktop/Thesis/Learning_Platform/Pd/Chapters
+, f 82;
+#X text 37 587 Note that it takes its input from a Message \, instead
+of a Number. As described in Lesson 2 \, Messages and Numbers can sometimes
+be interchangeable.;
+#X obj 25 670 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 37 100 Let's take short break from learning new objects. You
+know how to create a sound of any frequency in Pure Data now. However
+\, how do we control the volume of what is being played? (Except from
+turning off the DSP).;
+#X text 35 174 For that we have the multiplication object with a tilde
+(~). As you know \, this object does the multiplication operation on
+audio signals.;
+#X text 35 235 What happens if we multiply a soundwave with a number?
+It changes its amplitude \, in other words it changes how loud it is.
+The lower the number the lower the volume \, with 0 being absolutely
+silent.;
+#X text 35 309 Let's say we are working on a patch and we already have
+an oscillator \, but we do not want to hear its sound while we are
+trying out some other sounds. For this \, we can create an oscillator
+that is mute:;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 7 0;

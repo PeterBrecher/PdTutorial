@@ -1,0 +1,45 @@
+#N canvas -6 0 681 676 12;
+#X obj 176 104 metro 1000;
+#X obj 176 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 176 246 0;
+#X msg 281 200 1;
+#X obj 89 344 *~;
+#X obj 88 421 dac~;
+#X obj 176 198 del 500;
+#X obj 122 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 43 104 0 \, 880 5000;
+#X obj 43 166 line;
+#X obj 43 278 osc~;
+#X floatatom 43 222 5 0 0 0 - - -;
+#X msg 306 35 0;
+#X text 348 36 <- click here to turn the patch off;
+#X text 32 477 Explanation: The uppermost Bang activates the Message
+that is sent to the Line object and the Metronome. The Line starts
+generating numbers for the oscillator's frequency.;
+#X text 32 537 The Metronome sends out a Bang every 1000 milliseconds.
+This output activates the second Bang which \, in turn \, activates
+the Message containing 1 This then turns the sound on through the Multiplication
+object so that we can hear the oscillator play.;
+#X text 33 707 This ensures that we hear the sound change after 500
+milliseconds.;
+#X text 33 623 There is also a Delay object which forwards the second
+Bang after 500 milliseconds \, which then activates the Message containing
+0 that turns the sound off. After another 500 milliseconds have passed
+\, another Bang comes from the Metronome repeating the process.;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 2 0;
+#X connect 7 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 10 0 4 0;
+#X connect 11 0 10 0;
+#X connect 12 0 0 0;
