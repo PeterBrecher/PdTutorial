@@ -18,7 +18,7 @@ let's start learning by switching to the next page:;
 #X obj 43 451 cnv 15 610 40 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X text 76 424 Next page;
-#X text 46 117 Right now you most likely have 3 windows of Pure Dat
+#X text 46 117 Right now you most likely have 3 windows of Pure Data
 open: a small one which contains the "Audio off" or "Audio on" text
 together with a checkbox marked as DSP \, a second \, big window \,
 which is the main window of this tutorial \, and a window with Chapter
